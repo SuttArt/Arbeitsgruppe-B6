@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse</title>
+</head>
+<body>
+<div id="title">
+    <h1>Morsecode</h1>
+</div>
+
+<div id="main">
+    <h2>Was ist Morsecode?</h2>
+    <p>Morsecode ist ein oft verwendeter Code, um Ziffern und Buchstaben zu übertragen. Er funktioniert, indem lange und kurze Signale in einer bestimmten Reihenfolge gesendet und empfangen werden. </p>
+    <p>Standard-Morsecodetabellen:</p>
+    <div id="standard tables">
+        <table id="buchstabentabelle" style="border-collapse: collapse;" border="3">
+            <tbody>
+            <tr>
+                <td>Buchstabe</td>
+                <td>Morsecode</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>.-</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>-...</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>-.-.</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>-..</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>.</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>..-.</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>--.</td>
+            </tr>
+            <tr>
+                <td>H</td>
+                <td>....</td>
+            </tr>
+            <tr>
+                <td>I</td>
+                <td>..</td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>.---</td>
+            </tr>
+            <tr>
+                <td>K</td>
+                <td>-.-</td>
+            </tr>
+            <tr>
+                <td>L</td>
+                <td>.-..</td>
+            </tr>
+            <tr>
+                <td>M</td>
+                <td>--</td>
+            </tr>
+            <tr>
+                <td>N</td>
+                <td>-.</td>
+            </tr>
+            <tr>
+                <td>O</td>
+                <td>---</td>
+            </tr>
+            <tr>
+                <td>P</td>
+                <td>.--.</td>
+            </tr>
+            <tr>
+                <td>Q</td>
+                <td>--.-</td>
+            </tr>
+            <tr>
+                <td>R</td>
+                <td>.-.</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>T</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>U</td>
+                <td>..-</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>...-</td>
+            </tr>
+            <tr>
+                <td>W</td>
+                <td>.--</td>
+            </tr>
+            <tr>
+                <td>X</td>
+                <td>-..-</td>
+            </tr>
+            <tr>
+                <td>Y</td>
+                <td>-.--</td>
+            </tr>
+            <tr>
+                <td>Z</td>
+                <td>--..</td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="zifferntabelle" style="border-collapse: collapse;" border="3">
+            <tbody>
+            <tr>
+                <td>Ziffer</td>
+                <td>Morsecode</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>.----</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>..---</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>...--</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>....-</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>.....</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>-....</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>--...</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>---..</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>----.</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>-----</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h3>Geschichte</h3>
+    <h4>Wer hat das Morsealphabet erfunden?</h4>
+</div>
+<hr>
+<div id="übersetzer">
+    <h2>Morsecode Übersetzer</h2>
+    <p>Hier kann Morsecode übersetzt werden. Hierzu müssen folgende Dinge beachtet werden:</p>
+    <ul>
+        <li><b>.</b> und <b>- müssen</b> als kurze und lange Signale verwendet werden.</li>
+        <li>Zur Abtrennung von Buchstaben <b>muss</b> ein Leerzeichen verwendet werden.</li>
+    </ul>
+    <div id="text_to_morse">
+        <p>Hier Morsecode eingeben:</p>
+        <form>
+            <input type="text" name="morsecode">
+            <input type="submit" name="übersetzen" value="übersetzen">
+            <input type="reset" name="reset" value="zurücksetzen">
+            <p>Übersetzung:<i>hier Ausgabe einfügen</i></p>
+        </form>
+    </div>
+    <div id="morse_to_text">
+        <p>Hier Text eingeben:</p>
+        <form>
+            <input type="text" name="string">
+            <input type="submit" name="übersetzen" value="übersetzen">
+            <input type="reset" name="reset" value="zurücksetzen">
+            <p>Übersetzung:<i>hier Ausgabe einfügen</i></p>
+        </form>
+    </div>
+
+</div>
+<h3>Mehr über Morsecode erfahren?</h3>
+<a href="https://de.wikipedia.org/wiki/Morsecode" target="_blank">Morse-Code Wikipedia</a>
+</body>
+</html>
