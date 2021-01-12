@@ -2,14 +2,14 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
 <div id="Menu">
 	<div id="TopBar">
 		<ul>
-			<li><a href="../index.html">Home</a></li>
+			<li><a href="#">Home</a></li>
 			<li><a href="#">Über uns</a></li>
 			<li><a href="#">FAQ</a></li>
 			<li><a href="#">Kontakt</a></li>
@@ -133,17 +133,17 @@
 	
 				<ol>
 					<li>Wert bzw. Zahlen im jeweiligen Feld eingeben</li><br>
-					<li>Im Dropdown Menü Hex oder Dezimal auswählen</li><br>
+					<li>Im Dropdown Menü Dezimal oder Hexadezimal auswählen</li><br>
 				</ol>
 				<p>	Entweder: In das erste Feld zu übersetzenden <i>"string"</i> eingeben und <i>"Encode Button"</i> drücken<br><br>
 					Oder: In das erste Feld zu übersetzenden <i>"Wert"</i> eingeben und <i>"Decode Button"</i> drücken</p>
 				
-				<div id="DropDown">
-					<button onclick="showDropdown()" class="DropButton">Art des Wertes &#9660 </button>
-					<div id="dropdown-content" class="dropdown-content">
-						<button onclick"setValueFormat("dec")>Dezimal</button>
+				<div id="DropDownContainer">
+					<button onclick="showDropdown()" id="dropButton" class="DropButton">Art des Wertes &#9661 </button>
+					<div id="MydropdownContent" class="dropdown-content">
+						<button onclick="setValueFormat('Dezimal')">Dezimal</button>
 						<br>
-						<button onclick"setValueFormat("hex")>Hexadezimal</button>
+						<button onclick="setValueFormat('Hexadezimal')">Hexadezimal</button>
 					</div>
 					
 				
@@ -170,9 +170,9 @@
 	</div>
 	
 	<div class="ButtonImages">  
-		<img src="img/ShareImage.svg" alt="Google.com" style="width:50px;height:55px;"/>
-		<img src="img/LinkImage.svg" alt="Google.com" style="width:50px;height:55px;"/>			
-		<img src="img/ThumbUp.svg" alt="Google.com" style="width:50px;height:55px;"/> <br>
+		<img src="images/ShareImage.svg" alt="Google.com" style="width:50px;height:55px;"/>
+		<img src="images/LinkImage.svg" alt="Google.com" style="width:50px;height:55px;"/>			
+		<img src="images/ThumbUp.svg" alt="Google.com" style="width:50px;height:55px;"/> <br>
 		<a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a>	
 	</div>
 	
