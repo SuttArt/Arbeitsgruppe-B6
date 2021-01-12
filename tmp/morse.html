@@ -18,6 +18,7 @@
 
     <h2>Was ist Morsecode?</h2>
     <p>Morsecode ist ein oft verwendeter Code, um Ziffern und Buchstaben zu übertragen. Er funktioniert, indem lange und kurze Signale in einer bestimmten Reihenfolge gesendet und empfangen werden. </p>
+    <p>Verschiedene Kombinationen aus kurzen und langen Signalen werden verschiedenen Zeichen zugeordnet: </p>
     <p>Standard-Morsecodetabellen:</p>
     <div id="standard tables">
         <table id="buchstabentabelle" style="border-collapse: collapse;" border="3">
@@ -190,7 +191,7 @@
     <p>Ab diesem Zeitpunkt wurde der Morsecode immer weitläufiger eingesetzt und im Jahr <U>1865</U> als <i>Internationaler Morsecode</i> genormt.</p>
 
 <hr>
-<div id="übersetzer">
+<div id="morseTranslate">
     <h2>Morsecode Übersetzer</h2>
     <p>Hier kann Morsecode übersetzt werden. Hierzu müssen folgende Dinge beachtet werden:</p>
     <ul>
@@ -198,25 +199,28 @@
         <li>Zur Abtrennung von Buchstaben <b>muss</b> ein Leerzeichen verwendet werden.</li>
     </ul>
     <div id="text_to_morse">
-        <p>Hier Morsecode eingeben:</p>
+        <p>Hier Text eingeben:</p>
         <form>
-            <input type="text" name="morsecode">
+            <label for="text">Text</label>
+            <br>
+            <textarea id="text"></textarea>
             <input type="submit" name="übersetzen" value="übersetzen">
-            <input type="reset" name="reset" value="zurücksetzen">
-            <p>Übersetzung:<i>hier Ausgabe einfügen</i></p>
+            <p>Morsecode:<output></output> <i>hier Ausgabe einfügen</i></p>
         </form>
     </div>
     <div id="morse_to_text">
-        <p>Hier Text eingeben:</p>
+        <p>Hier Morsecode eingeben:</p>
         <form>
-            <input type="text" name="string">
+            <label for="morsecode">Morsecode</label>
+            <br>
+            <textarea id="morsecode"></textarea>
             <input type="submit" name="übersetzen" value="übersetzen">
-            <input type="reset" name="reset" value="zurücksetzen">
-            <p>Übersetzung:<i>hier Ausgabe einfügen</i></p>
+            <p>Klartext:<output></output><i>hier Ausgabe einfügen</i></p>
         </form>
     </div>
 
 </div>
+    <hr>
     <h3>Mehr über Morsecode erfahren?</h3>
     <a href="https://de.wikipedia.org/wiki/Morsecode" target="_blank">Morse-Code Wikipedia</a>
 </div>
