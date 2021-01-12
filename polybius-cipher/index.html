@@ -11,6 +11,10 @@
         .bu {
             border-bottom: 1px solid black;
         }
+        textarea {
+            width: 20rem;
+            height: 5rem
+        }
     </style>
 </head>
 <body>
@@ -98,6 +102,16 @@
             <td class="br">22</td>
         </tr>
     </table><br>
+
+    <label for="klartext">Klartext:</label><br>
+    <textarea name="klartext" id="klartext"></textarea><br>
+    <button type="button">Verschlüsseln!</button><br>
+    <br>
+    <label for="verschlüsselt">Verschlüsselt:</label><br>
+    <textarea readonly name="verschlüsselt" id="verschlüsselt"></textarea>
+    <br>
+    <br>
+    <br>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Stele_des_Polybios.jpg/220px-Stele_des_Polybios.jpg" alt="Bild von Polybios">
 </div>
 </body>
