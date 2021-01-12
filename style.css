@@ -1,3 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    background: lightgreen;
+}
+
 #titel{
     margin: 0;
     padding: 0;
@@ -11,6 +24,7 @@
 #main{
     position: absolute;
     top: 30%;
+    width: 100%;
 }
 
 #members{
@@ -32,6 +46,62 @@ td
 
 #footer{
     position: absolute;
+    width: 100%;
+    height: 200px;
     left: 0;
     bottom: 0;
+}
+
+
+/* Erste Button auf index.html */
+#firstBtn{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    background: lightgreen;
+}
+
+/* Form auf caesar.html */
+
+/*  Klartext/Geheimtext  */
+#klartext, #geheimtext{
+    min-width: 500px;
+    min-height: 100px;
+}
+
+/*  Position von Form selbst  */
+#caeserKrypt{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/*  Position von <select> Verschiebung  */
+#verschiebung{
+    position: absolute;
+    right: 0;
+}
+
+/*  Position von <label> Verschiebung  */
+#labelVerschiebung{
+    position: absolute;
+    right: 45px;
+}
+
+/*Home Button in header */
+#homeBtn{
+    background: inherit;
+    position: absolute;
+    top: 178px;
 }
