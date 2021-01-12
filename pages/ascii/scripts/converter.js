@@ -1,4 +1,4 @@
-var valueFormat;
+var valueFormat = "Dezimal";
 
 window.onscroll = function() {scrollFunction()};
 
@@ -12,18 +12,17 @@ window.onclick = function(event) {
         openDropdown.classList.remove('show');
       }
     }
-	document.getElementsByClassName("DropButton").value = "changed1";
-	document.getElementsByClassName("DropButton").innerHTML = "changed2";
   }
 }
 
 
 function showDropdown(){
-	document.getElementsByClassName("dropdown-content").classList.toggle("show");
+	document.getElementById("MydropdownContent").classList.toggle("show");
 }
 
 function setValueFormat(typ){
 	valueFormat = typ;
+	document.getElementById("dropButton").textContent = "Art des Wertes:" + valueFormat;
 }
 
 /* Scolls Header with the page a little*/
@@ -55,7 +54,11 @@ function converterASCIIToNum(inText /*value of textarea passed by value*/, outTe
 			key = "RETURN";
 		}
 		var temp = CharToAsciiDecimalTable[key];
-		//temp = temp; // if hex than convert to hex otherwise do nothing
+		/*format temp to hex if valueFormat is Hexadezimal*/
+		if (valueFormat == "Hexadezimal"){
+			temp = temp.toString(16); 
+		}
+		
 		if (temp) {
 			resultString += ((i > 0)? " " : "") + temp.toString();
 		}
@@ -76,7 +79,11 @@ function converterNumToASCII(inText /*value of textarea passed by value*/, outTe
 	
 	for (var i = 0; i < inText.length; i++){
 		var temp = AsciiDecimalToCharTable[charArray[i]];
-		//temp = temp; // if hex than convert to hex otherwise do nothing
+		
+		/*format temp to hex if valueFormat is Hexadezimal*/
+		if (valueFormat == "Hexadezimal"){
+			temp = temp.toString(16); 
+		}
 		if (temp) {
 			resultString += temp.toString();
 		}
