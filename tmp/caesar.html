@@ -15,8 +15,48 @@
 </div>
 
 <div id="main">
-Info info info...Kommt später
+    Die Cäsar-Chiffre ist eine einfache monoalphabetische Verschlüsselung und nach dem
+    römischen Feldherren und späteren Kaiser Julius Cäsar (100 v. Chr. bis 44 v. Chr.) benannt.
+    Der römische Dichter Sueton (eigentlich Gaius Suetonius Tranquillus, ca. von 70 n.
+    Chr. bis 130 n. Chr.) beschreibt in seiner Cäsar-Biografie, dass Cäsar zur Verschlüsselung
+    den jeweils drittnächsten Buchstaben des zu verschlüsselnden Buchstaben genutzt
+    hat.
+    <br>
+    Die letzten drei Buchstaben des Alphabets, die dann ja keine entsprechenden Nachfolger
+    mehr besitzen, werden mit den ersten drei Buchstaben verschlüsselt. Die folgende
+    Tabelle soll diese Verschlüsselung demonstrieren.
+    <br>
+    <br>
+    <img src="../img/EntschlüsselungstabelleCeasar.JPG" height="50px" id="EntschlüsselungstabelleCeasar">
+    <br>
+    <label for="EntschlüsselungstabelleCeasar"><i>Verschlüsselungstabelle der Cäsar-Chiffre für das deutsche Alphabet (ohne Umlaute und ß)</i></label>
+    <br>
+    <br>
+    Die Entschlüsselung geschieht dann in umgekehrte Richtung, das heißt, man nimmt jetzt den Buchstaben, der
+    sich im Alphabet um drei Stellen weiter vorn befindet.
+    <br>
+    <br>
+    <img src="../img/VerschlüsselungstabelleCeasar.JPG" height="50px" id="VerschlüsselungstabelleCeasar">
+    <br>
+    <label for="VerschlüsselungstabelleCeasar"><i>Entschlüsselungstabelle der Cäsar-Chiffre</i></label>
+    <br>
+    <br>
+    Es kann angenommen werden, dass Cäsar wichtige Nachrichten wirklich verschlüsselte, da er auch selbst in
+    seinem Buch Commentarii de bello Gallico (Kommentare über den Gallischen Krieg) eine Möglichkeit beschreibt,
+    griechische Buchstaben zum Verbergen seiner lateinischen Buchstaben zu benutzen.
+    <br>
+    Das Verfahren der Verschiebung, eigentlich ja sogar der Rotation des Alphabets um eine bestimmte Anzahl
+    von Buchstaben, kann natürlich auch mit einer anderen Anzahl als der angeblich von Cäsar verwendeten Zahl
+    3 erfolgen.
+    <br>
+    Das Verfahren ist immer gleich, der Schlüssel S kann allerdings Werte von 1 bis 25 annehmen (Bei einer Verschiebung
+    von 26 Zeichen würde das Alphabet ja wieder auf sich selbst abgebildet werden.).
+    <br>
+    Zum Entschlüsseln benutzen wir das gleiche Verfahren, rotieren das Alphabet jedoch um einen Wert von -S
+    (also in die andere Richtung) oder um 26-S.
 
+    <br>
+    <br>
     <form id="caeserKrypt">
         <label for="klartext">Klartext</label>
         <br>
@@ -61,10 +101,5 @@ Info info info...Kommt später
     </form>
 </div>
 
-<div id="footer">
-    <hr>
-    Viel Spaß uns! ^_^
-    <img src="../img/peace.jpg" height="70px" alt="peace">
-</div>
 </body>
 </html>
