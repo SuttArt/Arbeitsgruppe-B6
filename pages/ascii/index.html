@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+<div id="Menu">
+	<div id="TopBar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Über uns</a></li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">Kontakt</a></li>
+		</ul>	
+	</div>
+</div>
+
+
+<div id="NavBar">
+	<label for="NavBar">Navigation</label>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Über uns</a></li>
+		<li><a href="#">FAQ</a></li>
+		<li><a href="#">Kontakt</a></li>
+	</ul>	
+</div>
+
+<div class="HauptInhalt">
+	<div class="Artikel">
+		<h1>ASCII-Table Generator</h1>
+
+		<p>	
+			Willkommen beim ASCII Generator! 
+			<br>
+			Diese Webseite wandelt jedes Zeichen einer Zeichenkette in das entsprechende dezimale, oder aber auch hexadezimale Zeichen um. Zudem können Sie hier weitere Informationen zum Begriff ASCII 
+			als auch deren Grundlage für weitere Codierungen. Die ASCII, oder aber auch ausgeschrieben "American Standard Code for Information Interchange", ist eine 7-Bit Zeichenkodierung, welche als 
+			Grundlage für spätere mehr Bit basierende Kodierungen gilt.
+			<br>
+			Mithilfe der jeweiligen ASCII Tabelle kann ein jeweiliges Zeichen in seinen entsprechenden  Wert umgewandelt werden. Im Laufe der Zeit wurden weitere Codierungsformen etabliert
+			- so unter anderem der Codierungsstandart "UTF8".
+		</p>
+		<h2>Kodierung mithilfe von ASCII</h2>
+		<p>
+			Jedes Zeichen, welches durch ASCII dargestellt werden kann wird je einem Muster aus 7-Bit zugeordnet. Da jedes Bit 2 Zustände annehmen kann, folgt somit dass es 2<sup>7</sup>, somit 128 verschiedene Bitmuster zu Verfügung stehen.
+			Die Menge der durch ASCII darstellbaren Mengen wären somit 128 verschiedene Zeichen, wovon wiederum 95 druckbare Zeichen sind und die restlichen 33 Zeichen nicht druckbare Zeichen sind. Diese sind alle einem
+			jeweiligem Zahlenwert zugeordnet. Diese Zahlwerte können entweder als Dezimalzahl, Hexadezimalzahl oder aber auch als Oktadezimalzahl dargestellt werden.
+		</p>
+	
+		<h2>kurze Geschichte zu ASCII</h2>
+		<p>
+			Dieser verdrängte ab 2008 den ASCII-Code, da der UTF8-Code einerseits abwärtskompatibel ist und andererseits eine weitere Zeichenmenge beinhaltet. Dennoch hat der ASCII-Code selbst
+			heutzutage noch Anwendungsgebiete. So wird dieser unter anderem noch beim Erstellen von E-Mail oder bei der Domainauflösung mit Umlauten verwendet. Auf jeden Fall wird der Text in 
+			beiden Fällen vorm Übertragen in das ASCII-Format konvertiert. Das geschieht jedoch meist vollkommen automatisch.		
+		</p>
+
+	<div class="ASCII-Darstellung">
+		<label for="ASCII-Drastellungen">Eine <u>ASCII-128 Tabelle</u> stellt folgende dementsprechend formatierte Werte in einer Tabelle dar:</label>
+			<ul>
+					<li>ASCII-Dezimal Wert</li>
+					<li>ASCII-Hexadezimal Wert</li>
+					<li>ASCII-Oktadezimal Wert</li>
+					<li>Zeichen</li>
+			</ul>
+			<p>	Sollte man jedoch einen formatierten Wert haben und man möchte diesen in sein entsprechendes Zeichen umwandlen, so kann man im Internet speziell sortierte Tabelle finden, welche das Übersetzen leichter machen.</p>
+	</div>	
+</div>		
+
+
+<div class="Tabelle">
+<p class="Header">Eine ASCII Tabelle sieht unter anderem folgendermaßen aus:</p>
+	<table align="center">
+		<tr>
+			<th>Dec</th>
+			<th>Hex</th>
+			<th>Oct</th>
+			<th>Char</th>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>000</td>
+			<td>NUL (null)</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>1</td>
+			<td>001</td>
+			<td>SOH (start of heading)</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>2</td>
+			<td>002</td>
+			<td>STX (start of text)</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>3</td>
+			<td>003</td>
+			<td>ETX (end of text)</td>
+		</tr>
+	</table>
+</div>
+
+
+
+<hr>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- Container of whole application-->
+<div class="Anwendung">
+	<h1>ASCII-Wandler zum Ausprobieren</h1>
+
+	<!-- Textboxes as well as labels for input of User for ASCII-converter -->
+	<div id="Container">
+		<div id="ContainerRow">
+			<div id="TextAreas">
+			<form method=get">
+					<label for="AsciiToChar">Text</label><br>
+					<textarea id="AsciiToChar" maxlength="500"></textarea><br>
+					<label for="CharToAscii">ASCII Code</label><br>
+					<textarea id="CharToAscii" maxlength="500"></textarea><br>
+				</form>
+			</div>
+	
+			<!-- HOW-TO Guide + ASCII generator -->
+			<div id="HowTo">
+				<br>
+				<label for="How-To">Im folgenden wird beschrieben, wie Sie den folgenden ASCII-Umwandler verwenden:</label>
+	
+				<ol>
+					<li>Wert bzw. Zahlen im jeweiligen Feld eingeben</li><br>
+					<li>Im Dropdown Menü Hex oder Dezimal auswählen</li><br>
+				</ol>
+				<p>	Entweder: In das erste Feld zu übersetzenden <i>"string"</i> eingeben und <i>"Encode Button"</i> drücken<br><br>
+					Oder: In das erste Feld zu übersetzenden <i>"Wert"</i> eingeben und <i>"Decode Button"</i> drücken</p>
+				
+				<div id="DropDown">
+					<button onclick="showDropdown()" class="DropButton">Art des Wertes &#9660 </button>
+					<div id="dropdown-content" class="dropdown-content">
+						<button onclick"setValueFormat("dec")>Dezimal</button>
+						<br>
+						<button onclick"setValueFormat("hex")>Hexadezimal</button>
+					</div>
+					
+				
+				</div>	
+					
+					
+				<button type="button" id="UseGeneratorButtons" onclick="converterASCIIToNum(document.getElementById('AsciiToChar').value, document.getElementById('CharToAscii'))">Encode &#9660;</button>
+				<button type="button" id="UseGeneratorButtons" onclick="converterNumToASCII(document.getElementById('CharToAscii').value, document.getElementById('AsciiToChar'))">Decode &#9650;</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+	
+
+<!-- Footer section -->
+<div class="FussZeile">
+	<div class="Links">
+		<label for="Informationen-Links">Für weitere Informationen, besuchen Sie doch bitte folgende Seiten:</label>
+		<br>
+		<a href="https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange">ASCII Tabelle Wikipedia Eintrag</a>
+		<a href="https://www.ionos.de/digitalguide/server/knowhow/ascii-american-standard-code-for-information-interchange/">Digital Guides - Weitere ASCII Informationen</a>
+	</div>
+	
+	<div class="ButtonImages">  
+		<img src="img/ShareImage.svg" alt="Google.com" style="width:50px;height:55px;"/>
+		<img src="img/LinkImage.svg" alt="Google.com" style="width:50px;height:55px;"/>			
+		<img src="img/ThumbUp.svg" alt="Google.com" style="width:50px;height:55px;"/> <br>
+		<a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a>	
+	</div>
+	
+	<br>
+	
+	</div>
+</div>
+
+<script type="text/javascript" src="scripts/converter.js"></script>
+
+</body>
+</html>
