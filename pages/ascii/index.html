@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<title>ASCII-Code Wandler - Mainpage</title>
 	<link rel="stylesheet" href="styles.css"/>
 </head>
 
@@ -19,18 +20,19 @@
 
 
 <div id="NavBar">
-	<label for="NavBar">Navigation</label>
+	<label for="NavBar">Inhaltsverzeichnis</label>
 	<ul>
-		<li><a href="../index.html">Home</a></li>
-		<li><a href="#">Über uns</a></li>
-		<li><a href="#">FAQ</a></li>
-		<li><a href="#">Kontakt</a></li>
+		<li><a href="#EinleitungRef">Einleitung</a></li>
+		<li><a href="#VerschlüsselungRef">ASCII Verschlüsselung</a></li>
+		<li><a href="#GeschichteRef">ASCII Geschichte</a></li>
+		<li><a href="#ApplicationRef">Zum ASCII Generator</a></li>
 	</ul>	
 </div>
 
 <div class="HauptInhalt">
 	<div class="Artikel">
 		<h1>ASCII-Table Generator</h1>
+		<a name="EinleitungRef" class="Anker">[invisible]</a>
 
 		<p>	
 			Willkommen beim ASCII Generator! 
@@ -42,6 +44,7 @@
 			Mithilfe der jeweiligen ASCII Tabelle kann ein jeweiliges Zeichen in seinen entsprechenden  Wert umgewandelt werden. Im Laufe der Zeit wurden weitere Codierungsformen etabliert
 			- so unter anderem der Codierungsstandart "UTF8".
 		</p>
+		<a name="VerschlüsselungRef" class="Anker">[invisible]</a>
 		<h2>Kodierung mithilfe von ASCII</h2>
 		<p>
 			Jedes Zeichen, welches durch ASCII dargestellt werden kann wird je einem Muster aus 7-Bit zugeordnet. Da jedes Bit 2 Zustände annehmen kann, folgt somit dass es 2<sup>7</sup>, somit 128 verschiedene Bitmuster zu Verfügung stehen.
@@ -49,6 +52,7 @@
 			jeweiligem Zahlenwert zugeordnet. Diese Zahlwerte können entweder als Dezimalzahl, Hexadezimalzahl oder aber auch als Oktadezimalzahl dargestellt werden.
 		</p>
 	
+		<a name="GeschichteRef" class="Anker">[invisible]</a>
 		<h2>kurze Geschichte zu ASCII</h2>
 		<p>
 			Dieser verdrängte ab 2008 den ASCII-Code, da der UTF8-Code einerseits abwärtskompatibel ist und andererseits eine weitere Zeichenmenge beinhaltet. Dennoch hat der ASCII-Code selbst
@@ -112,6 +116,7 @@
 
 <!-- Container of whole application-->
 <div class="Anwendung">
+	<a name="ApplicationRef" class="Anker">[invisible]</a> 
 	<h1>ASCII-Wandler zum Ausprobieren</h1>
 
 	<!-- Textboxes as well as labels for input of User for ASCII-converter -->
@@ -119,10 +124,10 @@
 		<div id="ContainerRow">
 			<div id="TextAreas">
 			<form method=get">
-					<label for="AsciiToChar">Text</label><br>
-					<textarea id="AsciiToChar" maxlength="500"></textarea><br>
-					<label for="CharToAscii">ASCII Code</label><br>
-					<textarea id="CharToAscii" maxlength="500"></textarea><br>
+					<label for="CharToASCII">Text</label><br>
+					<textarea id="CharToASCII" maxlength="500"></textarea><br>
+					<label for="ASCIIToChar">ASCII Code</label><br>
+					<textarea id="ASCIIToChar" maxlength="500"></textarea><br>
 				</form>
 			</div>
 	
@@ -139,7 +144,7 @@
 					Oder: In das erste Feld zu übersetzenden <i>"Wert"</i> eingeben und <i>"Decode Button"</i> drücken</p>
 				
 				<div id="DropDownContainer">
-					<button onclick="showDropdown()" id="dropButton" class="DropButton">Art des Wertes &#9661 </button>
+					<button onclick="showDropdown()" id="dropButton" class="DropButton">Art des Wertes &#9661 (default: Dezimal)</button>
 					<div id="MydropdownContent" class="dropdown-content">
 						<button onclick="setValueFormat('Dezimal')">Dezimal</button>
 						<br>
@@ -150,8 +155,8 @@
 				</div>	
 					
 					
-				<button type="button" id="UseGeneratorButtons" onclick="converterASCIIToNum(document.getElementById('AsciiToChar').value, document.getElementById('CharToAscii'))">Encode &#9660;</button>
-				<button type="button" id="UseGeneratorButtons" onclick="converterNumToASCII(document.getElementById('CharToAscii').value, document.getElementById('AsciiToChar'))">Decode &#9650;</button>
+				<button type="button" id="UseGeneratorButtons" onclick="converterCharToASCII(document.getElementById('CharToASCII').value, document.getElementById('ASCIIToChar'))">Encode &#9660;</button>
+				<button type="button" id="UseGeneratorButtons" onclick="converterASCIIToChar(document.getElementById('ASCIIToChar').value, document.getElementById('CharToASCII'))">Decode &#9650;</button>
 			</div>
 		</div>
 	</div>

@@ -15,14 +15,13 @@ window.onclick = function(event) {
   }
 }
 
-
 function showDropdown(){
 	document.getElementById("MydropdownContent").classList.toggle("show");
 }
 
 function setValueFormat(typ){
 	valueFormat = typ;
-	document.getElementById("dropButton").textContent = "Art des Wertes:" + valueFormat;
+	document.getElementById("dropButton").textContent = "Art des Wertes: " + valueFormat;
 }
 
 /* Scolls Header with the page a little*/
@@ -37,10 +36,9 @@ function scrollFunction() {
 }
 
 
-
-function converterASCIIToNum(inText /*value of textarea passed by value*/, outText /*must hand over as object -> passed by reference*/) {
+function converterCharToASCII(inText /*value of textarea passed by value*/, outText /*must hand over as object -> passed by reference*/) {
 	if (!inText || 0 === inText.length) {
-		window.alert("Bitte geben Sie einen Text ein!");
+		window.alert("Bitte geben Sie einen Text in das 'Text-Feld' ein!");
 		return;
 	}
 	
@@ -68,27 +66,29 @@ function converterASCIIToNum(inText /*value of textarea passed by value*/, outTe
 	outText.value = resultString;
 }
 
-function converterNumToASCII(inText /*value of textarea passed by value*/, outText /*must hand over as object -> passed by reference*/) {
+function converterASCIIToChar(inText /*value of textarea passed by value*/, outText /*must hand over as object -> passed by reference*/) {
 	if (!inText || 0 === inText.length) {
-		window.alert("Bitte geben Sie einen Text ein!");
+		window.alert("Bitte geben Sie einen Text in das 'ASCII-Code Feld' ein!");
 		return;
 	}
 	
-	var charArray = inText.split(' ');
+	var NumArray = inText.split(' ');
 	var resultString = "";
 	
 	for (var i = 0; i < inText.length; i++){
-		var temp = AsciiDecimalToCharTable[charArray[i]];
+		var temp = "";
 		
-		/*format temp to hex if valueFormat is Hexadezimal*/
+		/*format temp to Dezimal if valueFormat is Dezimal else Hexadezimal => needs to be adjusted!!!*/ 
 		if (valueFormat == "Hexadezimal"){
-			temp = temp.toString(16); 
+			temp = AsciiDecimalToCharTable[parseInt(NumArray[i], 16)];
+		}else{
+			temp = AsciiDecimalToCharTable[NumArray[i]];
 		}
+			
 		if (temp) {
 			resultString += temp.toString();
 		}
 	}
-	
 	outText.innerHTML = resultString;
 	outText.value = resultString;
 }

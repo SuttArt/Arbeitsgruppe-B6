@@ -36,8 +36,8 @@ body{
 }
 
 p{
-		margin-left: 30px;
-		margin-right: 30px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .HauptInhalt{
@@ -157,6 +157,8 @@ p{
 	color: black;
 	width: 200px;
 	text-decoration: none;
+	
+	font-size: 17px;
 		
 	padding-left: 10px;
 	padding-top: 5px;
@@ -505,6 +507,12 @@ p{
 	}
 }
 
+.Anker {
+      position: relative;
+      top: -50px;
+      visibility:hidden;
+}
+
 @keyframes fadeOut {
   0% {
     opacity:1;
@@ -522,6 +530,11 @@ p{
 	}
 }
 
+#EinleitungRef {
+	top: -20px;
+	display:none;
+}
+
 *{
 	box-sizing: border-box;           
 	-webkit-box-sizing: border-box;
@@ -536,11 +549,11 @@ p{
 @media all and (max-width:920px){html {font-size: 17px;}}
 @media all and (max-width:880px){html {font-size: 16px;}}
 @media all and (max-width:840px){html {font-size: 15px;}}
-@media all and (max-width:800px){html {font-size: 14px;}}
+@media all and (max-width:800px){html {font-size: 14px;}}/*
 @media all and (max-width:760px){html {font-size: 13px;}}
 @media all and (max-width:720px){html {font-size: 12px;}}
 @media all and (max-width:680px){html {font-size: 11px;}}
 @media all and (max-width:640px){html {font-size: 10px;}}
 @media all and (max-width:600px){html {font-size: 9px;}}
 @media all and (max-width:560px){html {font-size: 8px;}}
-@media all and (max-width:520px){html {font-size: 7px;}}
+@media all and (max-width:520px){html {font-size: 7px;}}*/
