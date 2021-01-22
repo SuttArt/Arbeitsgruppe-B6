@@ -1,0 +1,62 @@
+main {
+    margin: auto 2rem;
+}
+
+.beispiel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: minmax(min-content, max-content);
+    margin-left: 2rem;
+}
+
+.beispiel-text {
+    font-size: 16px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.table_polybius {
+    table-layout: auto;
+    font-size: 16px;
+    text-align: center;
+    width: 250px;
+}
+
+.form {
+    display: flex;
+    grid-column: 1/-1;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-grid {
+    display: grid;
+    width: 100%;
+}
+
+.polybius_btn {
+    width: 40%;
+    margin: 20px auto;
+}
+
+.ta_polybius {
+    width: 100%;
+    height: 3rem;
+}
+
+.bild {
+    display: flex;
+}
+
+.br {
+    border-right: 1px solid black;
+}
+
+.bu {
+    border-bottom: 1px solid black;
+}
+textarea {
+    width: 20rem;
+    height: 5rem;
+}

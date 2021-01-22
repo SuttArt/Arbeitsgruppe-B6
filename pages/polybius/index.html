@@ -3,20 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Polybius Chiffre</title>
-    <style>
-        .br {
-            border-right: 1px solid black;
-        }
-
-        .bu {
-            border-bottom: 1px solid black;
-        }
-        textarea {
-            width: 20rem;
-            height: 5rem
-        }
-    </style>
     <link href="../../style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="header">
@@ -25,101 +13,116 @@
     </div>
     <a id="homeBtn" href="../index.html">zur Homepage</a>
 </div>
-<div id="beschreibung">
-    <p>Die <b>Polybius Chiffre</b> ist eine monographische bipartite monoalphabetische Substitution.</p>
-    <p>Diese Verwendet eine 5x5 Matrix beliebig angeordneten Buchstaben, wobei die Buchstaben I und J de selben Platz einnehmen. Zum verschlüsseln ersetzt man den
-        jeweiligen Buchstaben mit der Nummer der Reihe und Spalte.</p>
+<main>
+    <div id="beschreibung">
+        <p>Die <b>Polybius Chiffre</b> ist eine monographische bipartite monoalphabetische Substitution.</p>
+        <p>Diese Verwendet eine 5x5 Matrix beliebig angeordneten Buchstaben, wobei die Buchstaben I und J de selben
+            Platz einnehmen. Zum verschlüsseln ersetzt man den
+            jeweiligen Buchstaben mit der Nummer der Reihe und Spalte.</p>
+    </div>
     <hr>
     <h3>Beispiel:</h3>
-    <p>Verschlüsselungsmatrix:</p>
-    <table>
-        <tr>
-            <td  class="bu br"></td>
-            <td class="bu">1</td>
-            <td class="bu">2</td>
-            <td class="bu">3</td>
-            <td class="bu">4</td>
-            <td class="bu">5</td>
-        </tr>
-        <tr>
-            <td class="br">1</td>
-            <td>A</td>
-            <td>B</td>
-            <td>C</td>
-            <td>D</td>
-            <td>E</td>
-        </tr>
-        <tr>
-            <td class="br">2</td>
-            <td>F</td>
-            <td>G</td>
-            <td>H</td>
-            <td>I/J</td>
-            <td>K</td>
-        </tr>
-        <tr>
-            <td class="br">3</td>
-            <td>L</td>
-            <td>M</td>
-            <td>N</td>
-            <td>O</td>
-            <td>P</td>
-        </tr>
-        <tr>
-            <td class="br">4</td>
-            <td>Q</td>
-            <td>R</td>
-            <td>S</td>
-            <td>T</td>
-            <td>U</td>
-        </tr>
-        <tr>
-            <td class="br">5</td>
-            <td>V</td>
-            <td>W</td>
-            <td>X</td>
-            <td>Y</td>
-            <td>Z</td>
-        </tr>
-    </table><br>
-    <table>
-        <tr>
-            <td><b>Beispiel Text:</b></td>
-            <td class="br">G</td>
-            <td class="br">u</td>
-            <td class="br">t</td>
-            <td class="br">e</td>
-            <td class="br">n</td>
-            <td class="br"><div style="width: 1rem"></div></td>
-            <td class="br">T</td>
-            <td class="br">a</td>
-            <td class="br">g</td>
-        </tr>
-        <tr>
-            <td><b>Verschlüsselt:</b></td>
-            <td class="br">22</td>
-            <td class="br">45</td>
-            <td class="br">44</td>
-            <td class="br">15</td>
-            <td class="br">34</td>
-            <td class="br"> </td>
-            <td class="br">44</td>
-            <td class="br">11</td>
-            <td class="br">22</td>
-        </tr>
-    </table><br>
+    <div id="beispiel" class="beispiel">
+        <div id="matrix">
+            <p>Verschlüsselungsmatrix:</p>
+            <table class="table_polybius">
+                <tr>
+                    <td class="bu br"></td>
+                    <td class="bu">1</td>
+                    <td class="bu">2</td>
+                    <td class="bu">3</td>
+                    <td class="bu">4</td>
+                    <td class="bu">5</td>
+                </tr>
+                <tr>
+                    <td class="br">1</td>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td class="br">2</td>
+                    <td>F</td>
+                    <td>G</td>
+                    <td>H</td>
+                    <td>I/J</td>
+                    <td>K</td>
+                </tr>
+                <tr>
+                    <td class="br">3</td>
+                    <td>L</td>
+                    <td>M</td>
+                    <td>N</td>
+                    <td>O</td>
+                    <td>P</td>
+                </tr>
+                <tr>
+                    <td class="br">4</td>
+                    <td>Q</td>
+                    <td>R</td>
+                    <td>S</td>
+                    <td>T</td>
+                    <td>U</td>
+                </tr>
+                <tr>
+                    <td class="br">5</td>
+                    <td>V</td>
+                    <td>W</td>
+                    <td>X</td>
+                    <td>Y</td>
+                    <td>Z</td>
+                </tr>
+            </table>
+        </div>
+        <div id="beispiel-text" class="beispiel-text">
+            <table class="table_polybius">
+                <tr>
+                    <td><b>Beispiel Text:</b></td>
+                    <td class="br">G</td>
+                    <td class="br">u</td>
+                    <td class="br">t</td>
+                    <td class="br">e</td>
+                    <td class="br">n</td>
+                    <td class="br">
+                        <div style="width: 1rem"></div>
+                    </td>
+                    <td class="br">T</td>
+                    <td class="br">a</td>
+                    <td class="br">g</td>
+                </tr>
+                <tr>
+                    <td><b>Verschlüsselt:</b></td>
+                    <td class="br">22</td>
+                    <td class="br">45</td>
+                    <td class="br">44</td>
+                    <td class="br">15</td>
+                    <td class="br">34</td>
+                    <td class="br"></td>
+                    <td class="br">44</td>
+                    <td class="br">11</td>
+                    <td class="br">22</td>
+                </tr>
+            </table>
+        </div>
 
-    <label for="klartext">Klartext:</label><br>
-    <textarea name="klartext" id="klartext"></textarea><br>
-    <button type="button">Verschlüsseln!</button><br>
-    <br>
-    <label for="verschlüsselt">Verschlüsselt:</label><br>
-    <textarea readonly name="verschlüsselt" id="verschlüsselt"></textarea>
-    <br>
-    <br>
-    <br>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Stele_des_Polybios.jpg/220px-Stele_des_Polybios.jpg" alt="Bild von Polybios">
-</div>
+        <div id="form" class="form">
+            <div id="form-grid" class="form-grid">
+            <label for="klartext_polybius">Klartext:</label>
+            <textarea name="klartext_polybius" id="klartext_polybius" class="ta_polybius"></textarea>
+            <button type="button" id="polybius_btn" class="polybius_btn">Verschlüsseln!</button>
+            <label for="verschlüsselt_polybius">Verschlüsselt:</label>
+            <textarea readonly name="verschlüsselt_polybius" id="verschlüsselt_polybius" class="ta_polybius"></textarea>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div id="bild" class="bild">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Stele_des_Polybios.jpg/220px-Stele_des_Polybios.jpg"
+             alt="Bild von Polybios">
+    </div>
+</main>
 </body>
 </html>
 
