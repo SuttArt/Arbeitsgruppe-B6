@@ -4,9 +4,14 @@
 <head>
 	<title>ASCII-Code Wandler - Mainpage</title>
 	<link rel="stylesheet" href="styles.css"/>
+	<link rel="stylesheet" href="stylesMenus.css"/>
 </head>
 
 <body>
+<script type="text/javascript" src="scripts/converterAsciiScript.js"></script>
+<script type="text/javascript" src="scripts/dropButtonScript.js"></script>
+<script type="text/javascript" src="scripts/menuAnimationScript.js"></script>
+
 <div id="Menu">
 	<div id="TopBar">
 		<ul>
@@ -29,7 +34,7 @@
 	</ul>	
 </div>
 
-<div class="HauptInhalt">
+<div class="SeitenInhalt">
 	<div class="Artikel">
 		<h1>ASCII-Table Generator</h1>
 		<a name="EinleitungRef" class="Anker">[invisible]</a>
@@ -121,13 +126,28 @@
 
 	<!-- Textboxes as well as labels for input of User for ASCII-converter -->
 	<div id="Container">
-		<div id="ContainerRow">
+		<div id="ContainerGrid">
 			<div id="TextAreas">
 			<form method=get">
-					<label for="CharToASCII">Text</label><br>
-					<textarea id="CharToASCII" maxlength="500"></textarea><br>
-					<label for="ASCIIToChar">ASCII Code</label><br>
-					<textarea id="ASCIIToChar" maxlength="500"></textarea><br>
+				<label for="CharToASCII">Text</label>
+				<br>
+				<textarea id="CharToASCII" maxlength="500"></textarea>
+				<br>
+					
+				<div id="DropDownContainer">
+					<button onclick="showDropdown()" id="dropButton" class="DropButton">Art des Wertes &#9661 (default: Dezimal)</button>
+					<div id="MydropdownContent" class="dropdown-content">
+						<button onclick="setValueFormat('Dezimal')">Dezimal</button>
+						<br>
+						<button onclick="setValueFormat('Hexadezimal')">Hexadezimal</button>
+					</div>
+				<button type="button" id="UseGeneratorButtons" onclick="converterCharToASCII(document.getElementById('CharToASCII').value, document.getElementById('ASCIIToChar'))">Encode &#9660;</button>
+				<button type="button" id="UseGeneratorButtons" onclick="converterASCIIToChar(document.getElementById('ASCIIToChar').value, document.getElementById('CharToASCII'))">Decode &#9650;</button>
+				</div>	
+					<label for="ASCIIToChar">ASCII Code</label>
+					<br>
+					<textarea id="ASCIIToChar" maxlength="500"></textarea>
+					<br>
 				</form>
 			</div>
 	
@@ -143,20 +163,7 @@
 				<p>	Entweder: In das erste Feld zu übersetzenden <i>"string"</i> eingeben und <i>"Encode Button"</i> drücken<br><br>
 					Oder: In das erste Feld zu übersetzenden <i>"Wert"</i> eingeben und <i>"Decode Button"</i> drücken</p>
 				
-				<div id="DropDownContainer">
-					<button onclick="showDropdown()" id="dropButton" class="DropButton">Art des Wertes &#9661 (default: Dezimal)</button>
-					<div id="MydropdownContent" class="dropdown-content">
-						<button onclick="setValueFormat('Dezimal')">Dezimal</button>
-						<br>
-						<button onclick="setValueFormat('Hexadezimal')">Hexadezimal</button>
-					</div>
-					
 				
-				</div>	
-					
-					
-				<button type="button" id="UseGeneratorButtons" onclick="converterCharToASCII(document.getElementById('CharToASCII').value, document.getElementById('ASCIIToChar'))">Encode &#9660;</button>
-				<button type="button" id="UseGeneratorButtons" onclick="converterASCIIToChar(document.getElementById('ASCIIToChar').value, document.getElementById('CharToASCII'))">Decode &#9650;</button>
 			</div>
 		</div>
 	</div>
@@ -174,7 +181,7 @@
 		<a href="https://www.ionos.de/digitalguide/server/knowhow/ascii-american-standard-code-for-information-interchange/">Digital Guides - Weitere ASCII Informationen</a>
 	</div>
 	
-	<div class="ButtonImages">  
+	<div class="ButtomImages">  
 		<img src="img/ShareImage.svg" alt="Google.com" style="width:50px;height:55px;"/>
 		<img src="img/LinkImage.svg" alt="Google.com" style="width:50px;height:55px;"/>			
 		<img src="img/ThumbUp.svg" alt="Google.com" style="width:50px;height:55px;"/> <br>
@@ -186,7 +193,7 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="scripts/converter.js"></script>
+
 
 </body>
 </html>

@@ -26,6 +26,8 @@ html, body {
 	width:100%;
 	height: 100%;
 	
+	
+	
 	z-index: 10;
 	background-color: #5EB1BF;
 }
@@ -40,7 +42,7 @@ p{
 	margin-right: 30px;
 }
 
-.HauptInhalt{
+.SeitenInhalt{
 	position: relative;
 	text-align: left;	
 	word-wrap: normal;
@@ -61,135 +63,6 @@ p{
 	border-color: #333;
 	
 	box-shadow: 25px 15px #2D2D2D;
-}
-
-#TopBar{
-	position: fixed;
-	padding: 10px 10px;
-	font-size: 30px;
-	
-	min-height: 1vh;
-
-	transition: 0.5s;
-		
-	z-index:20;
-	top: 0px;
-	left: 0px;
-	
-	width: 100%;
-	
-	background-color: #333;
-}
-
-#TopBar a:hover{
-	font-size:33px;
-	background-color: #002B3D;
-	
-}
-
-#TopBar ul{
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-	
-
-}
-
-#TopBar li{
-	display: inline;
-	word-wrap: break-word;
-	
-	list-style-type: none;
-	float: left;
-}
-
-#TopBar li a{
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 10px 10px;
-	text-decoration: none;
-
-}
-
-#NavBar{
-	overflow: hidden;
-	position: fixed;
-
-	margin-left: 35px;
-	margin-right: 35px;
-	margin-top: 65px;
-	
-	z-index: 20;
-	
-	min-height: 18vh;
-	max-height: 25vh;
-
-	
-	min-width: 20vh;
-	max-width: 40vh;	
-	
-	transition: 0.5s;	
-	
-	background-color: #C1CDCD;
-
-	border-radius: 15px;
-	border-color: #000000;
-	
-	box-shadow: 5px 10px #2D2D2D;
-}
-
-#NavBar a:hover{
-	margin-left: 7px;
-	background-color: #002B3D;
-	color: white;
-	
-	width: 175px;
-	
-	font-weight: bold;
-	
-	border-radius: 50px;
-}
-
-#NavBar li a{
-	display: block;
-	color: black;
-	width: 200px;
-	text-decoration: none;
-	
-	font-size: 17px;
-		
-	padding-left: 10px;
-	padding-top: 5px;
-	padding-right: 0px;
-
-}
-
-#NavBar li{	
-	list-style-type: none;
-}
-
-#NavBar ul{
-	list-style-type: none;
-	margin: 1px;
-	padding: 0px;
-	overflow: hidden;
-}
-
-#NavBar label{
-	display: block;
-	margin: 0px;
-	padding-top: 7px;
-	padding-left: 7px;
-	padding-bottom: 5px;
-	
-	overflow: hidden;
-	background-color: #333;
-	color: white;
-	
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
 }
 
 .Artikel{
@@ -256,7 +129,7 @@ p{
 	color: black;
 }
 
-.Anwendung{
+.Anwendung{	
 	position: relative;
 	word-wrap: break-word;
 	
@@ -270,40 +143,29 @@ p{
 }
 
 .Anwendung #Container{
-	padding: 50px;
+	padding: 25px;
 	
 	width: 100%;
-	display: table;
 }
 
-.Anwendung #Container #Row{
-	display: table-row;
-}
-
-.Anwendung #Container #TextAreas{
-	display: table-cell;
-}
-
-.Anwendung #HowTo{
-	width: 50%;
-	height: 100%;
+.Anwendung #ContainerGrid{
+	display: grid;
+	grid-template-columns: auto auto auto;
 	
-	display: table-cell;
+	grid-gap: 20px;
 }
 
-.Anwendung #ContainerRow{
-	width: 100%;
-	height: 100%;
-}
 
 .DropDownContainer {
 	padding-left: 25px;
 	position: relative;
-	display: inline-block;
+	display: inline-block;/*needed?*/
+	
+	width:  100%;	
 }
 
 .DropButton {	
-	margin-left: 25px;
+	margin-left: 15px;
 
 	border: solid; 
 	border-width: 0.5px;
@@ -329,7 +191,7 @@ p{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	overflow: block;
 	
-	z-index: 100;
+	z-index: 50;
 }
 
 .DropDownContainer:hover .DropButton{
@@ -351,7 +213,7 @@ p{
 	margin-top: 20px;	
 }
 
-.Anwendung #Container #UseGeneratorButtons{
+.Anwendung #UseGeneratorButtons{
 	margin-left: 25px;
 }
 
@@ -374,11 +236,11 @@ p{
 	margin: 10px;
 }
 
-.ButtonImages{
+.ButtomImages{
 	display: inline;
 }
 
-.ButtonImages img{
+.ButtomImages img{
 	padding: 10px;
 }
 
@@ -394,7 +256,7 @@ p{
     transition: top 0.5s, opacity 0.5s;
 	}
 	
-	.HauptInhalt{
+	.SeitenInhalt{
 		display: block !important;
 		
 		margin-top: 50px !important;
@@ -424,7 +286,7 @@ p{
 	
 	html, body{
 		width: 100% !important;
-		height: 2150px !important;
+		height: 270vh !important;
 		
 		background-color: #333;
 	}
@@ -441,18 +303,50 @@ p{
 		width: 500px;
 		height: 100px;
 	}*/
+	
+	html, body{
+		width: 100% !important;
+		height: 270vh !important;
+		
+		background-color: #333;
+	}
+	
 }
 
-@media (max-width: 800px){	
+@media (max-width: 900px){	
 	.Anwendung textarea{
-		height: 20px;
+		height: 10px;
 		font-size: 12.5px;
 	}
-	/*
-	.Anwendung #Container #HowTo{
-		width: 700px;
-		height: 100px;
-	}*/
+	
+	html, body{
+		width: 100% !important;
+		height: 250vh !important;
+		
+		background-color: #333;
+	}
+
+}
+
+
+@media (max-width: 800px){		
+	html, body{
+		width: 100% !important;
+		height: 260vh !important;
+		
+		background-color: #333;
+	}
+
+}
+
+@media (max-width: 700px){	
+		html, body{
+		width: 100% !important;
+		height: 255vh !important;
+		
+		background-color: #333;
+	}
+
 }
 
 @media (max-width: 600px){	
@@ -460,11 +354,13 @@ p{
 		height: 20px;
 		font-size: 5px;
 	}
-	/*
-	.Anwendung #Container #HowTo{
-		width: 20px;
-		height: 100px;
-	}*/
+	
+	html, body{
+		width: 100% !important;
+		height: 282.5vh !important;
+		
+		background-color: #333;
+	}
 }
 
 /*go into fullscreen, if max-height has been reached*/
@@ -475,7 +371,7 @@ p{
 		transition: top 0.5s, opacity 0.5s;
 	}
 	
-	.HauptInhalt{
+	.SeitenInhalt{
 		display: block !important;
 		
 		margin-top: 74px !important;
@@ -499,18 +395,19 @@ p{
 		font-size: 25px;
 	}
 	
+	/*
 	html, body{
 		width: 100% !important;
-		height: 2100px !important;
+		height: 170vh !important;
 		
 		background-color: #333;
-	}
+	}*/
 }
 
 .Anker {
-      position: relative;
-      top: -50px;
-      visibility:hidden;
+    position: relative;
+    top: -50px;
+    visibility:hidden;
 }
 
 @keyframes fadeOut {
@@ -522,7 +419,7 @@ p{
   }
 }
 
-/**/
+
 @media (max-height: 2200px){
 	#NavBar{
 			max-height: 177px !important;
@@ -537,7 +434,6 @@ p{
 
 *{
 	box-sizing: border-box;           
-	-webkit-box-sizing: border-box;
 }
 
 @media all {html {font-size: 24px;}}
@@ -547,9 +443,9 @@ p{
 @media all and (max-width:800px){html {font-size: 19px;}}
 @media all and (max-width:960px){html {font-size: 18px;}}
 @media all and (max-width:920px){html {font-size: 17px;}}
-@media all and (max-width:880px){html {font-size: 16px;}}
+@media all and (max-width:880px){html {font-size: 16px;}}/*
 @media all and (max-width:840px){html {font-size: 15px;}}
-@media all and (max-width:800px){html {font-size: 14px;}}/*
+@media all and (max-width:800px){html {font-size: 14px;}}
 @media all and (max-width:760px){html {font-size: 13px;}}
 @media all and (max-width:720px){html {font-size: 12px;}}
 @media all and (max-width:680px){html {font-size: 11px;}}
