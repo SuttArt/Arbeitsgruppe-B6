@@ -54,9 +54,6 @@ td
 #firstBtn{
     margin: 0;
     padding: 0;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
     border-radius: 5px;
     height: 100px;
     width: 100px;
