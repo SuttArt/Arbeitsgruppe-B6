@@ -115,7 +115,7 @@ p{
 }
 
 
-.Tabelle{
+.Tabelle {
 	position: relative;
 	text-align: center;
 	word-wrap: break-word;
@@ -127,6 +127,11 @@ p{
 	min-width: 200px;	
 
 	color: black;
+}
+
+.Tabelle table{	
+	margin-left: auto;
+    margin-right: auto;
 }
 
 .Anwendung{	
@@ -170,7 +175,7 @@ p{
 	border: solid; 
 	border-width: 0.5px;
 
-	background-color: light-grey;	
+	background-color: white;	
 }
 
 .DropButton:hover, .DropButton:focus {		
@@ -189,7 +194,7 @@ p{
 	background-color: #B4B4B4;
 
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	overflow: block;
+	overflow: auto;
 	
 	z-index: 50;
 }
@@ -213,7 +218,7 @@ p{
 	margin-top: 20px;	
 }
 
-.Anwendung #UseGeneratorButtons{
+.Anwendung .UseGeneratorButtons{
 	margin-left: 25px;
 }
 
@@ -252,7 +257,6 @@ p{
 @media (max-width: 1530px){
 	#NavBar, #NavBar a, #NavBar label {
 	opacity: 0;
-    -webkit-transition: top 0.5s, opacity 0.5s;
     transition: top 0.5s, opacity 0.5s;
 	}
 	
@@ -367,7 +371,6 @@ p{
 @media (max-height: 500px){
 	#NavBar, #NavBar a, #NavBar label {
 		opacity: 0;
-		-webkit-transition: top 0.5s, opacity 0.5s;
 		transition: top 0.5s, opacity 0.5s;
 	}
 	
