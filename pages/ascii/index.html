@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="de">
 <head>
+	<meta charset="utf-8"/>
 	<title>ASCII-Code Wandler - Mainpage</title>
 	<link rel="stylesheet" href="styles.css"/>
 	<link rel="stylesheet" href="stylesMenus.css"/>
 </head>
 
 <body>
-<script type="text/javascript" src="scripts/converterAsciiScript.js"></script>
-<script type="text/javascript" src="scripts/dropButtonScript.js"></script>
-<script type="text/javascript" src="scripts/menuAnimationScript.js"></script>
+<script src="scripts/converterAsciiScript.js"></script>
+<script src="scripts/dropButtonScript.js"></script>
+<script src="scripts/menuAnimationScript.js"></script>
 
 <div id="Menu">
 	<div id="TopBar">
@@ -25,7 +25,7 @@
 
 
 <div id="NavBar">
-	<label for="NavBar">Inhaltsverzeichnis</label>
+	<label>Inhaltsverzeichnis</label>
 	<ul>
 		<li><a href="#EinleitungRef">Einleitung</a></li>
 		<li><a href="#VerschlüsselungRef">ASCII Verschlüsselung</a></li>
@@ -37,7 +37,7 @@
 <div class="SeitenInhalt">
 	<div class="Artikel">
 		<h1>ASCII-Table Generator</h1>
-		<a name="EinleitungRef" class="Anker">[invisible]</a>
+		<a id="EinleitungRef" class="Anker">[invisible]</a>
 
 		<p>	
 			Willkommen beim ASCII Generator! 
@@ -49,7 +49,7 @@
 			Mithilfe der jeweiligen ASCII Tabelle kann ein jeweiliges Zeichen in seinen entsprechenden  Wert umgewandelt werden. Im Laufe der Zeit wurden weitere Codierungsformen etabliert
 			- so unter anderem der Codierungsstandart "UTF8".
 		</p>
-		<a name="VerschlüsselungRef" class="Anker">[invisible]</a>
+		<a id="VerschlüsselungRef" class="Anker">[invisible]</a>
 		<h2>Kodierung mithilfe von ASCII</h2>
 		<p>
 			Jedes Zeichen, welches durch ASCII dargestellt werden kann wird je einem Muster aus 7-Bit zugeordnet. Da jedes Bit 2 Zustände annehmen kann, folgt somit dass es 2<sup>7</sup>, somit 128 verschiedene Bitmuster zu Verfügung stehen.
@@ -57,7 +57,7 @@
 			jeweiligem Zahlenwert zugeordnet. Diese Zahlwerte können entweder als Dezimalzahl, Hexadezimalzahl oder aber auch als Oktadezimalzahl dargestellt werden.
 		</p>
 	
-		<a name="GeschichteRef" class="Anker">[invisible]</a>
+		<a id="GeschichteRef" class="Anker">[invisible]</a>
 		<h2>kurze Geschichte zu ASCII</h2>
 		<p>
 			Dieser verdrängte ab 2008 den ASCII-Code, da der UTF8-Code einerseits abwärtskompatibel ist und andererseits eine weitere Zeichenmenge beinhaltet. Dennoch hat der ASCII-Code selbst
@@ -66,7 +66,7 @@
 		</p>
 
 	<div class="ASCII-Darstellung">
-		<label for="ASCII-Drastellungen">Eine <u>ASCII-128 Tabelle</u> stellt folgende dementsprechend formatierte Werte in einer Tabelle dar:</label>
+		<label>Eine <u>ASCII-128 Tabelle</u> stellt folgende dementsprechend formatierte Werte in einer Tabelle dar:</label>
 			<ul>
 					<li>ASCII-Dezimal Wert</li>
 					<li>ASCII-Hexadezimal Wert</li>
@@ -80,7 +80,7 @@
 
 <div class="Tabelle">
 <p class="Header">Eine ASCII Tabelle sieht unter anderem folgendermaßen aus:</p>
-	<table align="center">
+	<table id="table">
 		<tr>
 			<th>Dec</th>
 			<th>Hex</th>
@@ -117,32 +117,31 @@
 
 
 <hr>
-<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!-- Container of whole application-->
 <div class="Anwendung">
-	<a name="ApplicationRef" class="Anker">[invisible]</a> 
+	<a id="ApplicationRef" class="Anker">[invisible]</a> 
 	<h1>ASCII-Wandler zum Ausprobieren</h1>
 
 	<!-- Textboxes as well as labels for input of User for ASCII-converter -->
 	<div id="Container">
 		<div id="ContainerGrid">
 			<div id="TextAreas">
-			<form method=get">
+			<form method="get">
 				<label for="CharToASCII">Text</label>
 				<br>
 				<textarea id="CharToASCII" maxlength="500"></textarea>
 				<br>
 					
 				<div id="DropDownContainer">
-					<button onclick="showDropdown()" id="dropButton" class="DropButton">Art des Wertes &#9661 (default: Dezimal)</button>
+					<button onclick="showDropdown()" id="dropButton" class="DropButton">Art des Wertes &#9661; (default: Dezimal)</button>
 					<div id="MydropdownContent" class="dropdown-content">
 						<button onclick="setValueFormat('Dezimal')">Dezimal</button>
 						<br>
 						<button onclick="setValueFormat('Hexadezimal')">Hexadezimal</button>
 					</div>
-				<button type="button" id="UseGeneratorButtons" onclick="converterCharToASCII(document.getElementById('CharToASCII').value, document.getElementById('ASCIIToChar'))">Encode &#9660;</button>
-				<button type="button" id="UseGeneratorButtons" onclick="converterASCIIToChar(document.getElementById('ASCIIToChar').value, document.getElementById('CharToASCII'))">Decode &#9650;</button>
+				<button type="button" class="UseGeneratorButtons" onclick="converterCharToASCII(document.getElementById('CharToASCII').value, document.getElementById('ASCIIToChar'))">Encode &#9660;</button>
+				<button type="button" class="UseGeneratorButtons" onclick="converterASCIIToChar(document.getElementById('ASCIIToChar').value, document.getElementById('CharToASCII'))">Decode &#9650;</button>
 				</div>	
 					<label for="ASCIIToChar">ASCII Code</label>
 					<br>
@@ -154,13 +153,13 @@
 			<!-- HOW-TO Guide + ASCII generator -->
 			<div id="HowTo">
 				<br>
-				<label for="How-To">Im folgenden wird beschrieben, wie Sie den folgenden ASCII-Umwandler verwenden:</label>
+				<label>Im folgenden wird beschrieben, wie Sie den folgenden ASCII-Umwandler verwenden:</label>
 	
 				<ol>
-					<li>Wert bzw. Zahlen im jeweiligen Feld eingeben</li><br>
-					<li>Im Dropdown Menü Dezimal oder Hexadezimal auswählen</li><br>
+					<li>Wert bzw. Zahlen im jeweiligen Feld eingeben</li>
+					<li>Im Dropdown Menü Dezimal oder Hexadezimal auswählen</li>
 				</ol>
-				<p>	Entweder: In das erste Feld zu übersetzenden <i>"string"</i> eingeben und <i>"Encode Button"</i> drücken<br><br>
+				<p>	Entweder: In das erste Feld zu übersetzenden <i>"string"</i> eingeben und <i>"Encode Button"</i> drücken
 					Oder: In das erste Feld zu übersetzenden <i>"Wert"</i> eingeben und <i>"Decode Button"</i> drücken</p>
 				
 				
@@ -175,7 +174,7 @@
 <!-- Footer section -->
 <div class="FussZeile">
 	<div class="Links">
-		<label for="Informationen-Links">Für weitere Informationen, besuchen Sie doch bitte folgende Seiten:</label>
+		<label>Für weitere Informationen, besuchen Sie doch bitte folgende Seiten:</label>
 		<br>
 		<a href="https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange">ASCII Tabelle Wikipedia Eintrag</a>
 		<a href="https://www.ionos.de/digitalguide/server/knowhow/ascii-american-standard-code-for-information-interchange/">Digital Guides - Weitere ASCII Informationen</a>
@@ -185,7 +184,7 @@
 		<img src="img/ShareImage.svg" alt="Google.com" style="width:50px;height:55px;"/>
 		<img src="img/LinkImage.svg" alt="Google.com" style="width:50px;height:55px;"/>			
 		<img src="img/ThumbUp.svg" alt="Google.com" style="width:50px;height:55px;"/> <br>
-		<a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a>	
+		<a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a>
 	</div>
 	
 	<br>
