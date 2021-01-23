@@ -3,41 +3,24 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>ASCII-Code Wandler - Mainpage</title>
-	<link rel="stylesheet" href="styles.css"/>
-	<link rel="stylesheet" href="stylesMenus.css"/>
+	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 <script src="scripts/converterAsciiScript.js"></script>
 <script src="scripts/dropButtonScript.js"></script>
-<script src="scripts/menuAnimationScript.js"></script>
 
-<div id="Menu">
-	<div id="TopBar">
-		<ul>
-			<li><a href="../index.html">Home</a></li>
-			<li><a href="#">Über uns</a></li>
-			<li><a href="#">FAQ</a></li>
-			<li><a href="#">Kontakt</a></li>
-		</ul>	
-	</div>
+<div id="header">
+    <div id="titel">
+        <h1>ASCII-Code Übersetzer</h1>
+    </div>
+    <a id="homeBtn" href="../index.html">zur Homepage</a>
 </div>
 
 
-<div id="NavBar">
-	<label>Inhaltsverzeichnis</label>
-	<ul>
-		<li><a href="#EinleitungRef">Einleitung</a></li>
-		<li><a href="#VerschlüsselungRef">ASCII Verschlüsselung</a></li>
-		<li><a href="#GeschichteRef">ASCII Geschichte</a></li>
-		<li><a href="#ApplicationRef">Zum ASCII Generator</a></li>
-	</ul>	
-</div>
-
-<div class="SeitenInhalt">
-	<div class="Artikel">
+<div id="main">
+	<div id="Artikel">
 		<h1>ASCII-Table Generator</h1>
-		<a id="EinleitungRef" class="Anker">[invisible]</a>
 
 		<p>	
 			Willkommen beim ASCII Generator! 
@@ -49,7 +32,6 @@
 			Mithilfe der jeweiligen ASCII Tabelle kann ein jeweiliges Zeichen in seinen entsprechenden  Wert umgewandelt werden. Im Laufe der Zeit wurden weitere Codierungsformen etabliert
 			- so unter anderem der Codierungsstandart "UTF8".
 		</p>
-		<a id="VerschlüsselungRef" class="Anker">[invisible]</a>
 		<h2>Kodierung mithilfe von ASCII</h2>
 		<p>
 			Jedes Zeichen, welches durch ASCII dargestellt werden kann wird je einem Muster aus 7-Bit zugeordnet. Da jedes Bit 2 Zustände annehmen kann, folgt somit dass es 2<sup>7</sup>, somit 128 verschiedene Bitmuster zu Verfügung stehen.
@@ -57,7 +39,6 @@
 			jeweiligem Zahlenwert zugeordnet. Diese Zahlwerte können entweder als Dezimalzahl, Hexadezimalzahl oder aber auch als Oktadezimalzahl dargestellt werden.
 		</p>
 	
-		<a id="GeschichteRef" class="Anker">[invisible]</a>
 		<h2>kurze Geschichte zu ASCII</h2>
 		<p>
 			Dieser verdrängte ab 2008 den ASCII-Code, da der UTF8-Code einerseits abwärtskompatibel ist und andererseits eine weitere Zeichenmenge beinhaltet. Dennoch hat der ASCII-Code selbst
@@ -65,7 +46,7 @@
 			beiden Fällen vorm Übertragen in das ASCII-Format konvertiert. Das geschieht jedoch meist vollkommen automatisch.		
 		</p>
 
-	<div class="ASCII-Darstellung">
+	<div id="ASCII-Darstellung">
 		<label>Eine <u>ASCII-128 Tabelle</u> stellt folgende dementsprechend formatierte Werte in einer Tabelle dar:</label>
 			<ul>
 					<li>ASCII-Dezimal Wert</li>
@@ -78,8 +59,8 @@
 </div>		
 
 
-<div class="Tabelle">
-<p class="Header">Eine ASCII Tabelle sieht unter anderem folgendermaßen aus:</p>
+<div id="Tabelle">
+<p id="Header">Eine ASCII Tabelle sieht unter anderem folgendermaßen aus:</p>
 	<table id="table">
 		<tr>
 			<th>Dec</th>
@@ -112,20 +93,23 @@
 			<td>ETX (end of text)</td>
 		</tr>
 	</table>
+	<p>
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+	Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+	Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+	Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.   
+	At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+	</p>
 </div>
 
-
-
-<hr>
-
 <!-- Container of whole application-->
-<div class="Anwendung">
-	<a id="ApplicationRef" class="Anker">[invisible]</a> 
+<div id="Anwendung">
 	<h1>ASCII-Wandler zum Ausprobieren</h1>
 
 	<!-- Textboxes as well as labels for input of User for ASCII-converter -->
 	<div id="Container">
-		<div id="ContainerGrid">
+		<div id="ContainerRow">
 			<div id="TextAreas">
 			<form method="get">
 				<label for="CharToASCII">Text</label>
@@ -169,18 +153,16 @@
 
 </div>
 
-	
-
 <!-- Footer section -->
-<div class="FussZeile">
-	<div class="Links">
+<div id="footer">
+	<div id="Links">
 		<label>Für weitere Informationen, besuchen Sie doch bitte folgende Seiten:</label>
 		<br>
 		<a href="https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange">ASCII Tabelle Wikipedia Eintrag</a>
 		<a href="https://www.ionos.de/digitalguide/server/knowhow/ascii-american-standard-code-for-information-interchange/">Digital Guides - Weitere ASCII Informationen</a>
 	</div>
 	
-	<div class="ButtomImages">  
+	<div id="ButtomImages">  
 		<img src="img/ShareImage.svg" alt="Google.com" style="width:50px;height:55px;"/>
 		<img src="img/LinkImage.svg" alt="Google.com" style="width:50px;height:55px;"/>			
 		<img src="img/ThumbUp.svg" alt="Google.com" style="width:50px;height:55px;"/> <br>
@@ -191,8 +173,6 @@
 	
 	</div>
 </div>
-
-
 
 </body>
 </html>
