@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    height: 200px;
+    background: lightgreen;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+#titel{
+    text-align: center;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 4rem;
+    grid-gap: 4rem;
+}
+
+#main #footer{
+    grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+#main > * {
+}
+
+#members{
+    border: solid;
+    border-collapse: collapse;
+}
+
+textarea{
+	width:  calc(30vw - 0.1vw);
+	height: calc(30vh - 5vw);
+	resize: none;
+}
+
+th
+{
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+td
+{
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+#footer{
+    height: 200px;
+}
+
+/*Home Button in header */
+#homeBtn{
+    background: inherit;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/*Container with Position from Form */
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*All div in flex-container */
+.flex-container > div {
+    margin: 10px;
+}
