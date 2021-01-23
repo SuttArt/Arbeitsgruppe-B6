@@ -1,0 +1,17 @@
+/*  Textfelder Morsecode/Text  */
+#morsecode, #text{
+    min-width: 500px;
+    min-height: 100px;
+}
+
+.kursiv{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#ziffern_tabelle,#buchstaben_tabelle{
+    border: 3px solid black;
+}
