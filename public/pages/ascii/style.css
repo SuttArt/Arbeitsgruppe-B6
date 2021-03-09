@@ -77,3 +77,9 @@ td
 .flex-container > div {
     margin: 10px;
 }
+
+.favoritenCheck{
+    position: absolute;
+    left: 85%;
+    top: 28%;
+}

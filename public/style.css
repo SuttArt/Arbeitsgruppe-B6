@@ -92,3 +92,16 @@ td
     max-width: 100%;
 }
 
+.favoriten{
+    padding-top: 12px;
+}
+.favoritenBtn input{
+    margin-top: 12px;
+}
+
+.favoritenCheck{
+    position: absolute;
+    left: 85%;
+    top: 28%;
+}
+
