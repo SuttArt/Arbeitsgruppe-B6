@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../style.css" rel="stylesheet" type="text/css">
+    <link href="/style.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Morse</title>
 </head>
@@ -12,7 +12,11 @@
     <div id="titel">
         <h1 id="titelSeite">Morsecode</h1>
     </div>
-    <a id="homeBtn" href="../index.html">zur Homepage</a>
+    <a id="homeBtn" href="/index.html">zur Homepage</a>
+    <div class="favoritenCheck">
+        <input type="checkbox" id="favoritenCheck">
+        <label for="favoritenCheck">Seite zur Favoriten hinzufügen</label>
+    </div>
 </div>
 
 <div id="main">
@@ -226,10 +230,15 @@
 
     </div>
 </div>
-<div class="favoritenCheck">
-    <input type="checkbox" id="favoritenCheck">
-    <label for="favoritenCheck">Seite zur Favoriten hinzufügen</label>
+<div id="commentContainer">
+    <h1>Kommentare</h1>
+    <div id="comments"></div>
+    <div id="commentForm">
+        <textarea name="text" id="commentText"></textarea>
+        <input type="button" name="absenden" id="absenden" value="Absenden">
+    </div>
 </div>
 </body>
 <script src="/script/FavoritScriptSeite.js"></script>
+<script src="/script/comments.js"></script>
 </html>

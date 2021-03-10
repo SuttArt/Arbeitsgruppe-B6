@@ -57,6 +57,41 @@ server.post("/api/favoriten", (req,res)=>{
         res.sendStatus(200);
 })
 
+// comment storage
+let comments = {};
+
+// Endpoint for querying all comments on a page
+server.post("/api/comments", (req,res)=>{
+    res.send(comments[req.body.page] || JSON.stringify([]))
+})
+
+
+// Endpoint for posting a comment on a page
+server.post("/api/comment", (req,res)=>{
+    const { session } = req.cookies;
+    const { text, page } = req.body
+
+    // Check if the text-content of the comment was empty
+    if (typeof text != "string" || text.length <= 0) {
+        res.status(400).send("Der eingebene Kommentar war unzulässig.")
+        return
+    }
+
+    // Create the comment list for the page if it does not exist
+    if (!comments[page]) {
+        comments[page] = []
+    }
+
+    // Add the comment to the page's list
+    comments[page].push({
+        creator: session,
+        text
+    })
+
+    // Return the changed list
+    res.send(comments[page])
+})
+
 server.use(express.static(__dirname + '/public'));
 
 server.listen(8080);

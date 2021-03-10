@@ -1,41 +1,10 @@
-body{
-    margin: 0;
-    padding: 0;
-}
-
-#header{
-    height: 200px;
-    background: lightgreen;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-}
-
-#titel{
-    text-align: center;
-}
-
 #main{
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    padding: 4rem;
-    grid-gap: 4rem;
 }
 
 #main #footer{
     grid-column-start: 1;
 	grid-column-end: 3;
-}
-
-#main > * {
-}
-
-#members{
-    border: solid;
-    border-collapse: collapse;
 }
 
 textarea{
@@ -68,18 +37,7 @@ td
     bottom: 0;
 }
 
-/*Container with Position from Form */
-.flex-container{
-    display: flex;
-    flex-wrap: wrap;
-}
 /*All div in flex-container */
 .flex-container > div {
     margin: 10px;
-}
-
-.favoritenCheck{
-    position: absolute;
-    left: 85%;
-    top: 28%;
 }
