@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/style.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
+	<script src="./script/setVisitedPages.js"></script>
     <title>Morse</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
     <div id="titel">
         <h1 id="titelSeite">Morsecode</h1>
     </div>
-    <a id="homeBtn" href="/index.html">zur Homepage</a>
+    <a id="homeBtn" href="/index.html"  onclick="setCookie('mainpage');">zur Homepage</a>
     <div class="favoritenCheck">
         <input type="checkbox" id="favoritenCheck">
         <label for="favoritenCheck">Seite zur Favoriten hinzufügen</label>

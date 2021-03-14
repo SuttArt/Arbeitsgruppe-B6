@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./style.css" rel="stylesheet" type="text/css">
+		<script src="./script/getVisitedPages.js"></script>
+		<script src="./script/setVisitedPages.js"></script>
         <title>Arbeitsgruppe B6</title>
     </head>
     <body>
@@ -13,6 +15,8 @@
                 <h2>Hauptseite</h2>
             </div>
         </div>
+		
+		
 
         <div id="main">
             <div>
@@ -50,7 +54,7 @@
                     <tr>
                         <td>Noah-Leander Wegner</td>
                         <td></td>
-                        <td><a href="" target="_blank">GitHub profile</a></td>
+                        <td><a href="https://github.com/speedNoah" target="_blank">GitHub profile</a></td>
                     </tr>
                     <tr>
                         <td>Clemens Arne Meier</td>
@@ -70,6 +74,13 @@
                 </table>
             </div>
         </div>
+		
+		<div class="mostVisitedPages">
+			<h3>Most visited Webpage[s]:</h3>
+			<p id="mostVisitedPages" class="mostVisitedPagesText"> -placeholder- </p>
+			<script>getCookie();</script>
+		</div>
+		
         <div class="favoriten">
             <h3>Favoriten-Seiten:</h3>
             <div id="favoriten" class="favoritenBtn">

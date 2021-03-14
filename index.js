@@ -13,6 +13,7 @@ server.use((req, res, next) => {
         res.cookie("session", uuidv4(), { maxAge: 99999999999 });
         next();
     }
+	
 });
 
 let favoriten = {};
@@ -91,6 +92,55 @@ server.post("/api/comment", (req,res)=>{
     // Return the changed list
     res.send(comments[page])
 })
+
+//cookies storage
+let userCookie = {};
+
+//Endpoint for setting cookies with countNumber for each page
+server.post("/api/pagescount", (req,res) =>{
+	const sessionCookie = req.cookies.session;
+	
+	if (sessionCookie === undefined){
+		res.sendStatus(400);
+	}else{
+		let pageName = req.body.currentPage 
+		if (userCookie[sessionCookie][pageName] !== undefined){
+			userCookie[sessionCookie][pageName]	+= 1;
+		}else {
+			userCookie[sessionCookie][pageName]	= 1;
+		}	
+	}
+})
+
+//Endpoint for showing most visited pagews[s]
+server.get("/api/pagescount", (req,res) =>{
+  const sessionCookie = req.cookies.session;
+  let currentMax = 0;
+	
+  if (userCookie[sessionCookie] === undefined) {
+	res.sendStatus(400);
+  }else {
+    for (let i in userCookie[sessionCookie]) {
+      checkValue = userCookie[sessionCookie][i];
+      
+      if (checkValue > currentMax) {
+        currentMax = checkValue;
+        pagesName = i;
+      }
+      else if (checkValue == currentMax) {
+        pagesName += " & " + "'" + i;
+      }
+    }
+ 
+    if (currentMax != 0) {
+		// FIXME: only write in a text field or I don't know
+		res.send("Most visited Page: " + pagesName + " with " + currentMax + " visits") ;
+    }else {
+		res.send("") ;
+	}
+  }
+})
+
 
 server.use(express.static(__dirname + '/public'));
 
