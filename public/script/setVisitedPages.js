@@ -12,3 +12,4 @@ function addCount(){
             console.error('Error:', error);
         });
 }
+addCount();

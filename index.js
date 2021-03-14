@@ -104,11 +104,16 @@ server.post("/api/pagescount", (req,res) =>{
 		res.sendStatus(400);
 	}else{
 		let pageName = req.body.currentPage 
-		if (userCookie[sessionCookie][pageName] !== undefined){
-			userCookie[sessionCookie][pageName]	+= 1;
-		}else {
-			userCookie[sessionCookie][pageName]	= 1;
-		}	
+		if (userCookie[sessionCookie]){
+			if (userCookie[sessionCookie][pageName] !== undefined){
+				userCookie[sessionCookie][pageName]	+= 1;
+			}else {
+				userCookie[sessionCookie][pageName]	= 1;
+			}
+		}else{
+			userCookie[sessionCookie] = {};
+			userCookie[sessionCookie][pageName] = 1;
+		}			
 	}
 })
 
@@ -116,9 +121,10 @@ server.post("/api/pagescount", (req,res) =>{
 server.get("/api/pagescount", (req,res) =>{
   const sessionCookie = req.cookies.session;
   let currentMax = 0;
+  let pagesName ="";
 	
   if (userCookie[sessionCookie] === undefined) {
-	res.sendStatus(400);
+	res.sendStatus(200);
   }else {
     for (let i in userCookie[sessionCookie]) {
       checkValue = userCookie[sessionCookie][i];
@@ -128,13 +134,13 @@ server.get("/api/pagescount", (req,res) =>{
         pagesName = i;
       }
       else if (checkValue == currentMax) {
-        pagesName += " & " + "'" + i;
+        pagesName += " & " + i;
       }
     }
  
     if (currentMax != 0) {
 		// FIXME: only write in a text field or I don't know
-		res.send("Most visited Page: " + pagesName + " with " + currentMax + " visits") ;
+	res.send({text:"Most visited Page: " + pagesName + " with " + currentMax + " visits"}) ;
     }else {
 		res.send("") ;
 	}
