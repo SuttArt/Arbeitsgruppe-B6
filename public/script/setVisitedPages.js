@@ -12,5 +12,3 @@ function addCount(){
             console.error('Error:', error);
         });
 }
-
-window.onload = addCount();

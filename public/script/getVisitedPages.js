@@ -6,6 +6,4 @@ function getCount(){
 	).catch(error => {
         console.error('Error:', error);
     });
-}  
-
-window.onload = getCount();
+}
