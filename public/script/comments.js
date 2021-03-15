@@ -31,7 +31,6 @@ function displayComments(comments) {
     const container = document.getElementById("comments")
     container.innerHTML = ""
     for (const comment of comments) {
-        console.log(comment)
         container.innerHTML += `
                 <div class="comment">
                     <span>&gt; ${escapeHtml(comment.creator)}</span>
